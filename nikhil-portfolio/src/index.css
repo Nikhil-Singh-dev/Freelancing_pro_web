@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: #F7F6F2;
+  color: #16202E;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Sora', sans-serif;
+}
+
+::selection {
+  background-color: #C98A3B;
+  color: #101826;
+}
+
+:focus-visible {
+  outline: 2px solid #C98A3B;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
