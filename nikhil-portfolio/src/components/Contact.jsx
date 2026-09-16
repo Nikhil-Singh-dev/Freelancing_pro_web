@@ -55,7 +55,7 @@ export default function Contact() {
   )}`;
 
   return (
-    <section id="contact" className="bg-paper py-20 md:py-28">
+    <section id="contact" className="bg-paper py-14 md:py-28">
       <div className="max-w-content mx-auto px-5 sm:px-8">
         <SectionHeading
           kicker="Contact"
@@ -63,14 +63,14 @@ export default function Contact() {
           description="Tell me a little about what you need, or reach out directly using any of the options below."
         />
 
-        <div className="grid lg:grid-cols-[1fr_1fr] gap-10">
+        <div className="grid lg:grid-cols-[1fr_1fr] gap-7 lg:gap-10">
           {/* Contact form (mailto-based, no backend) */}
           <form
             onSubmit={(e) => {
               e.preventDefault();
               window.location.href = mailtoHref;
             }}
-            className="bg-paper-2 border border-line rounded-lg p-6 sm:p-8 space-y-5"
+            className="bg-paper-2 border border-line rounded-lg p-5 sm:p-8 space-y-4 sm:space-y-5"
           >
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-ink mb-1.5">
@@ -129,14 +129,14 @@ export default function Contact() {
           </form>
 
           {/* Direct contact options */}
-          <div className="grid xs:grid-cols-2 gap-3.5 content-start">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 content-start">
             {contactLinks.map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex flex-col gap-3 rounded-lg border border-line bg-paper-2 p-5 hover:border-accent/40 transition-colors duration-200"
+                className="flex flex-col gap-2.5 rounded-lg border border-line bg-paper-2 p-4 sm:p-5 hover:border-accent/40 transition-colors duration-200"
               >
                 <Icon size={20} className="text-accent-dark" strokeWidth={1.75} />
                 <div>

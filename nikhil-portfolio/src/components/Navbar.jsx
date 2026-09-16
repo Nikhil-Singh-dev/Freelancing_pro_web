@@ -85,24 +85,24 @@ export default function Navbar() {
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex flex-col px-6 pt-6 gap-1">
+        <ul className="flex flex-col px-5 pt-4 gap-0">
           {links.map((link) => (
             <li key={link.href} className="border-b border-white/10">
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block py-4 text-lg text-paper/90 font-display font-medium"
+                className="block py-3.5 text-base text-paper/90 font-display font-medium"
               >
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
-        <div className="px-6 pt-6">
+        <div className="px-5 pt-5">
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="block text-center w-full rounded-md bg-accent px-4 py-3 text-base font-medium text-ink"
+            className="block text-center w-full rounded-md bg-accent px-4 py-3 text-sm font-medium text-ink"
           >
             Start a project
           </a>

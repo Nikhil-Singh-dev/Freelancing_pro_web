@@ -21,10 +21,10 @@ const servicesList = [
 
 export default function Footer() {
   return (
-    <footer className="bg-ink border-t border-white/10 pt-16 pb-8">
+    <footer className="bg-ink border-t border-white/10 pt-12 pb-6 md:pt-16 md:pb-8">
       <div className="max-w-content mx-auto px-5 sm:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12">
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 pb-9 md:gap-10 md:pb-12">
+          <div className="col-span-2 lg:col-span-1">
             <a href="#home" className="flex items-center gap-2.5 mb-4">
               <span className="w-9 h-9 rounded-md bg-accent text-ink font-display font-bold text-sm flex items-center justify-center">
                 NS
@@ -33,18 +33,18 @@ export default function Footer() {
                 {profile.brandName}
               </span>
             </a>
-            <p className="text-sm text-paper/55 leading-relaxed max-w-xs">
+            <p className="text-xs sm:text-sm text-paper/55 leading-relaxed max-w-xs">
               Full stack web developer building websites and web apps for small businesses,
               startups and individuals.
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium text-paper mb-4">Navigation</h4>
+            <h4 className="text-xs sm:text-sm font-medium text-paper mb-3">Navigation</h4>
             <ul className="space-y-2.5">
               {nav.map((item) => (
-                <li key={item.href}>
-                  <a href={item.href} className="text-sm text-paper/55 hover:text-paper transition-colors duration-200">
+                  <li key={item.href}>
+                    <a href={item.href} className="text-xs sm:text-sm text-paper/55 hover:text-paper transition-colors duration-200">
                     {item.label}
                   </a>
                 </li>
@@ -53,24 +53,24 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-medium text-paper mb-4">Services</h4>
+            <h4 className="text-xs sm:text-sm font-medium text-paper mb-3">Services</h4>
             <ul className="space-y-2.5">
               {servicesList.map((item) => (
-                <li key={item} className="text-sm text-paper/55">
+                <li key={item} className="text-xs sm:text-sm text-paper/55">
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-sm font-medium text-paper mb-4">Contact</h4>
-            <ul className="space-y-2.5 text-sm text-paper/55">
+          <div className="col-span-2 lg:col-span-1">
+            <h4 className="text-xs sm:text-sm font-medium text-paper mb-3">Contact</h4>
+            <ul className="space-y-2 text-xs sm:text-sm text-paper/55">
               <li>{profile.location}</li>
               <li className="break-all">{profile.email}</li>
               <li>{profile.phone}</li>
             </ul>
-            <div className="flex gap-3 mt-5">
+            <div className="flex gap-2.5 mt-4">
               <a
                 href={profile.github}
                 target="_blank"
@@ -100,11 +100,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="text-xs text-paper/40">
+        <div className="pt-5 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <p className="text-[11px] text-center sm:text-left text-paper/40">
             © {new Date().getFullYear()} {profile.fullName}. All rights reserved.
           </p>
-          <p className="text-xs text-paper/40">Built with React & Tailwind CSS</p>
+          <p className="text-[11px] text-paper/40">Built with React & Tailwind CSS</p>
         </div>
       </div>
     </footer>
