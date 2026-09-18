@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section id="about" className="bg-ink py-20 md:py-28">
       <div className="max-w-content mx-auto px-5 sm:px-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-start">
-        <div>
+        <div className="hidden sm:block">
           <div className="relative w-full max-w-xs mx-auto lg:mx-0">
             <div className="aspect-[4/5] rounded-lg bg-ink-2 border border-white/10 overflow-hidden">
               {!imgError ? (

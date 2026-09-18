@@ -49,7 +49,7 @@ export default function Hero() {
         </div>
 
         {/* Right: personal profile preview */}
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div className="relative mx-auto hidden w-full max-w-md sm:block lg:max-w-none">
           <div className="overflow-hidden rounded-xl border border-white/10 bg-ink-2 shadow-2xl">
             <img
               src={profile.profileImage}

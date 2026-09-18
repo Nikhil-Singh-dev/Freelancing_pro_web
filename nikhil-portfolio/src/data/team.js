@@ -23,6 +23,18 @@ const team = [
     tags: ["JavaScript", "Java", "DSA"],
   },
   {
+    name: "Tarun Sondhiya",
+    role: "Full Stack Developer",
+    description: "BCA student and aspiring software developer working across JavaScript, python, C, and data structures.",
+    image: "/tarun.png",
+    initials: "TS",
+    email: "tarunsondhiya58@gmail.com",
+    github: "https://github.com/tarun-s-cloud",
+    linkedin: "https://www.linkedin.com/in/tarun-sondhiya-34ab81315/",
+    x: "https://x.com/tarun_sondhiya",
+    tags: ["JavaScript", "Python", "DSA"],
+  },
+  {
     name: "Rohit Patel",
     role: "UI/UX Designer",
     description: "Shapes clear, thoughtful interfaces that make the product feel intuitive from the very first interaction.",
@@ -31,6 +43,7 @@ const team = [
     email: "rohitpatelhs@gmail.com",
     github: "",
     linkedin: "",
+    x: "",
     tags: ["User research", "UX flows", "Visual design"],
   },
 ];

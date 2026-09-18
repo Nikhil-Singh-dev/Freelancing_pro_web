@@ -55,7 +55,10 @@ h1, h2, h3, h4, .font-display {
   }
 
   #home > div {
-    gap: 1.75rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: start;
   }
 
   #home h1 {
@@ -68,7 +71,8 @@ h1, h2, h3, h4, .font-display {
   }
 
   #home .relative.mx-auto {
-    max-width: 19rem;
+    max-width: 22rem;
+    margin-top: 0.25rem;
   }
 
   section[id] > div {
@@ -134,18 +138,18 @@ h1, h2, h3, h4, .font-display {
   }
 
   #projects .project-card {
-    display: grid;
-    grid-template-columns: 7rem minmax(0, 1fr);
-    align-items: stretch;
+    display: block;
   }
 
   #projects .project-card-image {
-    aspect-ratio: auto;
-    min-height: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 12rem;
   }
 
   #projects .project-card-image img {
     height: 100%;
+    object-fit: cover;
+    object-position: center top;
   }
 
   #projects .project-card-image > span {
@@ -181,11 +185,12 @@ h1, h2, h3, h4, .font-display {
     padding-top: 0.5rem;
   }
 
-  #about .grid,
-  #education .grid,
-  #resume .grid,
-  #contact .grid {
-    gap: 1.5rem;
+  #about > div,
+  #education > div,
+  #resume > div,
+  #contact > div > .grid {
+    display: block;
+    gap: 0;
   }
 
   #about .space-y-4 {
@@ -245,7 +250,7 @@ h1, h2, h3, h4, .font-display {
   }
 
   #education .max-w-md {
-    margin-top: -0.5rem;
+    margin-top: 0.5rem;
   }
 
   #education .pb-10 {
@@ -257,7 +262,10 @@ h1, h2, h3, h4, .font-display {
   }
 
   #education .grid {
+    display: grid;
     gap: 0.5rem;
+    grid-template-columns: 1fr;
+    margin-top: 0.75rem;
   }
 
   #education .grid > div {
@@ -290,20 +298,6 @@ h1, h2, h3, h4, .font-display {
     padding-right: 1rem;
   }
 
-  /* Keep the mobile composition close to the desktop layout. */
-  #home > div,
-  #about > div,
-  #education > div,
-  #resume > div,
-  #contact > div > .grid {
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-    gap: 0.75rem;
-  }
-
-  #home > div {
-    align-items: center;
-  }
-
   #home h1 {
     font-size: 1.35rem;
   }
@@ -327,10 +321,6 @@ h1, h2, h3, h4, .font-display {
 
   #home .mt-8 > div {
     font-size: 0.55rem;
-  }
-
-  #home .relative.mx-auto {
-    max-width: 100%;
   }
 
   #home .relative.mx-auto .px-5 {
