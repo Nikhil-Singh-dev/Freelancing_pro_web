@@ -8,8 +8,8 @@ export default function ProjectCard({ project }) {
   const hasLinks = liveUrl || githubUrl;
 
   return (
-    <div className="group flex flex-col bg-paper-2 rounded-lg border border-line overflow-hidden hover:shadow-card transition-shadow duration-200">
-      <div className="relative aspect-[16/10] bg-ink-2 overflow-hidden">
+    <div className="project-card group flex flex-col bg-paper-2 rounded-lg border border-line overflow-hidden hover:shadow-card transition-shadow duration-200">
+      <div className="project-card-image relative aspect-[16/10] bg-ink-2 overflow-hidden">
         {!imgError ? (
           <img
             src={image}

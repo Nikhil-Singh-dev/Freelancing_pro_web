@@ -12,7 +12,7 @@ export default function HowWeWork() {
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
           {process.map((item) => (
-            <div key={item.step} className="flex gap-4">
+            <div key={item.step} className="process-item flex gap-4">
               <span className="font-display font-semibold text-2xl text-accent-dark/70 leading-none shrink-0 w-9">
                 {item.step}
               </span>

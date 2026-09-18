@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import profile from "../data/profile";
 
 export default function Hero() {
@@ -48,28 +48,19 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: real project preview */}
+        {/* Right: personal profile preview */}
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="overflow-hidden rounded-xl border border-white/10 bg-ink-2 shadow-2xl">
             <img
-              src="/Quiz.png"
-              alt="Quiz Master Platform project preview"
-              className="aspect-[4/3] w-full object-cover object-top"
+              src={profile.profileImage}
+              alt={`Portrait of ${profile.fullName}`}
+              className="aspect-[4/3] w-full object-cover object-center"
             />
-            <div className="flex items-center justify-between gap-4 border-t border-white/10 px-5 py-4">
+            <div className="border-t border-white/10 px-5 py-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.12em] text-accent-light">Featured build</p>
-                <p className="mt-1 font-display text-sm font-medium text-paper">Quiz Master Platform</p>
+                <p className="text-xs uppercase tracking-[0.12em] text-accent-light">Full stack developer</p>
+                <p className="mt-1 font-display text-sm font-medium text-paper">{profile.fullName}</p>
               </div>
-              <a
-                href="https://quiz-test-delta.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Quiz Master Platform"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-white/15 text-paper/70 transition-colors duration-200 hover:border-accent hover:text-accent-light"
-              >
-                <ExternalLink size={16} />
-              </a>
             </div>
           </div>
         </div>

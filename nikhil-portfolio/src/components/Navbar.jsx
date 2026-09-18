@@ -81,7 +81,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 bg-ink transition-transform duration-300 ease-out ${
+        className={`lg:hidden fixed inset-x-0 top-16 bottom-0 z-50 isolate bg-ink shadow-2xl transition-transform duration-300 ease-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

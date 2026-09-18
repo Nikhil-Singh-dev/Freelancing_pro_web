@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
           {whyChooseUs.map((item) => {
             const Icon = iconMap[item.icon] || CheckCircle2;
             return (
-              <div key={item.title} className="flex gap-4">
+              <div key={item.title} className="why-item flex gap-4">
                 <Icon size={20} className="text-accent-light shrink-0 mt-0.5" strokeWidth={1.75} />
                 <div>
                   <h3 className="font-display font-medium text-paper text-base mb-1.5">{item.title}</h3>
